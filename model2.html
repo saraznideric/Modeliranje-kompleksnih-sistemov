@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+
+<!-- Univerza v Mariboru | Fakulteta za organizacijske vede -->
+<!-- Sara Žniderič 2019 -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modeliranje kompleksnih sistemov</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="http://iconsetc.com/icons-watermarks/flat-rounded-square-white-on-pink/animals/animals_paw-5/animals_paw-5_flat-rounded-square-white-on-pink_512x512.png">
+  </head>
+  
+<!-- v naslednji vrsici ob odprtju html strani pokličemo funkcijo "load", ki inicializira html -->
+<body onload="load();">
+
+<style>
+  body
+  {
+    background: #FFFFFF;
+    font-size: 18px;
+  }
+
+  div.top
+  {
+    background: #c33763;  /* fallback for old browsers */
+    color: white;
+    height: 75px;
+    line-height: 50px;
+    font-size: 18px; 
+    
+  }
+     
+  .w3-theme 
+  {
+    color:#fff !important; background-color:#C33763!important
+  }
+      
+  input 
+  {
+    background-color: whitesmoke;
+    font-size:18px;
+  }
+
+  #Search 
+  {
+    float:right;
+    font-size: 18px;
+  }
+
+.w3-footer
+{
+  background: #c33763;
+  color: white;
+  height: 75px;
+  line-height: 50px;
+  font-size: 18px; 
+}
+
+
+
+   
+</style>
+
+<!-- Navbar -->
+<div class="top">
+  <div class=" w3-dropdown-hover w3-hide-small w3-hover-opacity ">
+    <button class=" w3-button w3-theme w3-large" >Domov</button>    
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hover-opacity"> 
+    <a href="#1" class="w3-bar-item w3-button w3-hide-small">Uvod</a>
+    <a href="#2" class="w3-bar-item w3-button w3-hide-small">Vsebina</a>
+    <a href="#3" class="w3-bar-item w3-button w3-hide-small">Viri</a>
+    </div>
+  </div>
+  <a href="#povezava" class="w3-bar-item w3-button w3-hide-small w3-hover-opacity">Agentni model</a>
+  <a href="#povezava" class="w3-bar-item w3-button w3-hide-small w3-hover-opacity">Zvezni model</a>
+  <a href="#" id="Search" style="border:8px solid  #C33763 "  class="w3-bar-item w3-medium  "><input placeholder="Search"></a></div>
+</div> 
+
+<!--1 Container -->
+  
+<div class="w3-container w3-padding-24 w3-center" >
+  <h1>Modeliranje kompleksnih sistemov </h1> <br><br><br>
+  <div class="js-container">        
+  
+  </div>       
+  <br><br>
+  <div class=" w3-half w3-center">
+  <img src="" alt="Slika" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Agentni model</h3>
+  <p>agentniModel</p>
+</div>
+
+<div class=" w3-half w3-center ">
+  <img src="" alt="Slika" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Zvezni model</h3>
+  <p>zvezniModel</p>
+</div>
+
+</div> 
+<br><br>
+Čas: <input type="text" id="polje-s-časom" value = 0>
+Stop čas: <input type="text" id="stop-čas" value = 5000>
+Okuženi: <input type="text" id="število-okuženih" value = 0>
+Dovzetni: <input type="text" id="število-dovzetnih" value = 0>
+Število trkov: <input type="text" id="število-trkov" value = 0><br><br>
+
+<button onclick="startGumb();">Začetek</button>
+<button onclick="stop();">Stop</button>
+<button onclick="koračniZagon();">Koračno</button><br><br>
+<canvas id="platno-graf-0" width="500" height="200" style="border:2px solid #C33763"></canvas>
+
+<canvas id="platno-graf-1" width="500" height="200" style="border:2px solid #C33763"></canvas>
+<br>
+<canvas id="platno-graf-4" width="500" height="200" style="border:2px solid #C33763"></canvas>
+<canvas id="platno-graf-2" width="500" height="100" style="border:2px solid #C33763"></canvas>
+
+<canvas id="platno-graf-3" width="500" height="100" style="border:2px solid #C33763"></canvas>
+<br>
+<canvas id="platno1" width="1400" height="1000" style="border:2px solid #C33763"></canvas>
+
+<script src="model1.js"></script>
+
+<!-- Footer -->
+<div><br>
+  <footer class="w3-container w3-center w3-footer">
+      
+    <a class="w3-button w3-center w3-hover-opacity " id="fb" href="https://www.facebook.com/sara.znideric" title="Facebook"> <img src="slike/fb.png"/><i class="button"></i></a>
+    <a class="w3-button w3-center w3-hover-opacity" href="https://fov.um.si/sl" title="FOV">FOV<i class="button"></i></a>
+    <a class="w3-button w3-center w3-hover-opacity">&copy; Žniderič Sara 2019</a> 
+
+  </footer>
+</div> 
+</body>
+</html>
